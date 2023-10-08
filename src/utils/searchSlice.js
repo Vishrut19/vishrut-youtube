@@ -6,6 +6,7 @@ const searchSlice = createSlice({
   reducers: {
     cacheResult: (state, action) => {
       // This will basically merge the payload and state.
+      // {search term -> "ip": search result ->  ["iphone 11","iphone 12", "iphone 13"]}
       return { ...state, ...action.payload };
     },
   },
