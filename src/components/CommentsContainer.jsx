@@ -73,6 +73,7 @@ const commentsData = [
   },
 ];
 
+// This is individual Comments Component
 const Comment = ({ data }) => {
   const { name, text, replies } = data;
   return (
@@ -92,7 +93,7 @@ const Comment = ({ data }) => {
 
 const CommentsList = ({ comments }) => {
   return comments.map((comment, index) => (
-    <div>
+    <div key={index}>
       <Comment key={index} data={comment} />
       {/* Replies */}
       <div className="pl-5 ml-5 border border-l-black">
